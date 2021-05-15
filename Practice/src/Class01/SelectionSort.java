@@ -22,17 +22,19 @@ public class SelectionSort {
             for (int j = i + 1; j < arr.length; j++) {
                 minindex = arr[j] < arr[minindex] ? j : minindex;
             }
-            swap(arr, i, minindex);
+            if( i != minindex){
+                swap(arr, i, minindex);
+            }
         }
     }
 // 交换两个数组元素的位置
     public static void swap(int arr[], int i, int j){
-//        arr[i] = arr[i] ^ arr[j];
-//        arr[j] = arr[i] ^ arr[j];
-//        arr[i] = arr[i] ^ arr[j];
-        int tmp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = tmp;
+        arr[i] = arr[i] ^ arr[j];
+        arr[j] = arr[i] ^ arr[j];
+        arr[i] = arr[i] ^ arr[j];
+//        int tmp = arr[i];
+//        arr[i] = arr[j];
+//        arr[j] = tmp;
     }
 // 随机生成数组
     public static int[] generateRadomArray(int maxSize, int maxValue){
@@ -83,7 +85,7 @@ public class SelectionSort {
         int testTime = 100;
         int maxSize = 10;
         int maxValue = 20;
-        for (int num = 0; num < testTime; num++) {
+        for (int i = 0; i < testTime; i++) {
             int[] arr1 = generateRadomArray(maxSize, maxValue);
             int[] arr2 = copyArray(arr1);
             selectionSort(arr1);
