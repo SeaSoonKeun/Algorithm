@@ -23,7 +23,9 @@ import java.util.Arrays;
  */
 public class BubbleSort {
     public static void bubbleSort(int[] arr){
+        // 只需要比到倒数第二个数，因为倒数第二个会和最后一个数比较
         for (int i = 0; i < arr.length - 1; i++) {
+            //因为需要比较j+1，所以j需要在arrlength - i 基础上再减一
             for (int j = 0 ; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]){
                     swap(arr, j, j+1);
@@ -31,6 +33,7 @@ public class BubbleSort {
             }
         }
     }
+    // 随机生成数据
     public static int[] generatArray(int maxSize, int maxValue){
         int length = (int)((maxSize + 1) * Math.random());
         int[] arr = new int[length];
@@ -40,14 +43,17 @@ public class BubbleSort {
         }
         return arr;
     }
+    // 交换数组元素
     public static void swap(int[] arr, int a, int b){
         arr[a] = arr[a] ^ arr[b];
         arr[b] = arr[a] ^ arr[b];
         arr[a] = arr[a] ^ arr[b];
     }
+    // Arrays工具对数器
     public static void comparator(int[] arr){
         Arrays.sort(arr);
     }
+    // 复制数组
     public static int[] copyArray(int[] arr){
         int[] arr2 = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -55,12 +61,14 @@ public class BubbleSort {
         }
         return arr2;
     }
+    // 打印数组
     public static void printArray(int[] arr){
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
+    // 判断两个数组是否相等
     public static boolean isEqual (int[] arr1, int[] arr2){
         if (arr1.length != arr2.length){
             return false;
