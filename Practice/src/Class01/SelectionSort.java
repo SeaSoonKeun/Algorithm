@@ -22,6 +22,7 @@ public class SelectionSort {
             for (int j = i + 1; j < arr.length; j++) {
                 minindex = arr[j] < arr[minindex] ? j : minindex;
             }
+            // 因为采用异或的方式进行置换元素，所以需要保证两个数不一样
             if( i != minindex){
                 swap(arr, i, minindex);
             }
