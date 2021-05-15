@@ -90,9 +90,9 @@ public class SelectionSort {
             int[] arr1 = generateRadomArray(maxSize, maxValue);
             int[] arr2 = copyArray(arr1);
             selectionSort(arr1);
-            //printArray(arr1);
+            printArray(arr1);
             comparator(arr2);
-            //printArray(arr2);
+            printArray(arr2);
             System.out.println(isEqual(arr1,arr2) ? "success":"failed");
         }
     }
