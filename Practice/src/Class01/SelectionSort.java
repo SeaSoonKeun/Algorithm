@@ -22,10 +22,11 @@ public class SelectionSort {
             for (int j = i + 1; j < arr.length; j++) {
                 minindex = arr[j] < arr[minindex] ? j : minindex;
             }
-            // 因为采用异或的方式进行置换元素，所以需要保证两个数不一样
-            if( i != minindex){
+            // 因为采用异或的方式进行数组置换元素时，所以需要保证两个数的索引不一样，因为同一索引指的是同一个地址空间
+            if( i != minindex) {
                 swap(arr, i, minindex);
             }
+//            }
         }
     }
 // 交换两个数组元素的位置
@@ -88,11 +89,13 @@ public class SelectionSort {
         int maxValue = 20;
         for (int i = 0; i < testTime; i++) {
             int[] arr1 = generateRadomArray(maxSize, maxValue);
+//            int[] arr1 = new int[]{5,4,4};
             int[] arr2 = copyArray(arr1);
+//            printArray(arr1);
             selectionSort(arr1);
-            printArray(arr1);
+//            printArray(arr1);
             comparator(arr2);
-            printArray(arr2);
+//            printArray(arr2);
             System.out.println(isEqual(arr1,arr2) ? "success":"failed");
         }
     }
