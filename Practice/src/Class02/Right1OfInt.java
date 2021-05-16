@@ -16,7 +16,12 @@ a & (-a) 负数等去取反加一
 */
 public class Right1OfInt {
     public static void main(String[] args) {
-
+        System.out.println(right1OfInt(10));
     }
-    public static int
+    public static int right1OfInt(int num){
+        int result = 0;
+        result = num & (-num);
+//        result = num & (~num + 1);
+        return result;
+    }
 }
