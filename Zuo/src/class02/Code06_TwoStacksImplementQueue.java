@@ -21,12 +21,12 @@ public class Code06_TwoStacksImplementQueue {
 				}
 			}
 		}
-
+		// 队列添加值
 		public void add(int pushInt) {
 			stackPush.push(pushInt);
 			pushToPop();
 		}
-
+		// 队列的poll方法，返回并删除值
 		public int poll() {
 			if (stackPop.empty() && stackPush.empty()) {
 				throw new RuntimeException("Queue is empty!");
@@ -34,7 +34,7 @@ public class Code06_TwoStacksImplementQueue {
 			pushToPop();
 			return stackPop.pop();
 		}
-
+		// 队列的peek方法，只返回值，不删除
 		public int peek() {
 			if (stackPop.empty() && stackPush.empty()) {
 				throw new RuntimeException("Queue is empty!");
