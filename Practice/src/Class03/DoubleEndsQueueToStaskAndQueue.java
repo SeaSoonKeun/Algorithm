@@ -7,7 +7,10 @@ import java.util.Stack;
 /**
  * @Auther: xucg
  * @Date: 2021/6/10 - 06 - 10 - 2:11 下午
- * @Description: Class03
+ * @Description: 手动编写双端队列类，并通过双端队列实现栈和队列
+ * 思路：双端队列使用双链表实现几个功能：头部入，头部取；尾部入，尾部取。
+ * 栈调用头部的入和取两个方法
+ * 队列调用头部入和尾部取的两个方法
  */
 public class DoubleEndsQueueToStaskAndQueue {
     // 双端队列的数据结构

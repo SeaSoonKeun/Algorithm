@@ -6,7 +6,9 @@ import java.util.List;
 /**
  * @Auther: xucg
  * @Date: 2021/5/19 - 05 - 19 - 下午10:49
- * @Description: Class03
+ * @Description: 逆转双链表
+ * 思路：抓住双链表中的引用节点，对当前节点进行操作就可以了，不需要考虑后面的节点，但要保证链表的指针不能断掉。
+ * 双链表的定义也是从单个应用节点出发，所以可以参考。举一反三。
  */
 public class ReverseDoubleList {
     public static DoubleNode reverseDoubleList(DoubleNode head){
@@ -22,6 +24,7 @@ public class ReverseDoubleList {
         return Prev;
     }
     public static List<Integer> getDoubleListOriginOrder(DoubleNode head) {
+        // 使用ArrayList做对数器
         List<Integer> ans = new ArrayList<>();
         while (head != null) {
             ans.add(head.value);
@@ -48,6 +51,7 @@ public class ReverseDoubleList {
         }
         return true;
     }
+    // 生成随机双链表，使用一个cur引用变量，保留头指针的同时，替头指针完成循环追加元素的功能
     public static DoubleNode generateRandomDoubleList(int len, int value) {
         int size = (int) (Math.random() * (len + 1));
         if (size == 0) {

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Auther: xucg
  * @Date: 2021/5/19 - 05 - 19 - 下午10:48
- * @Description: Class03
+ * @Description: 逆转单链表，参照双链表的思路，一样的。多了一步操作。
  */
 /*
 * 反转单链表*/

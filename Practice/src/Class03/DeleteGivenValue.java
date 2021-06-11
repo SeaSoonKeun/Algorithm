@@ -3,7 +3,9 @@ package Class03;
 /**
  * @Auther: xucg
  * @Date: 2021/6/10 - 06 - 10 - 11:38 上午
- * @Description: Class03
+ * @Description: 删除给定的值
+ * 1、单链表：注意从第一个头指针不是该删除元素开始，并使用cur元素，替代进行循环，避免头指针的丢失
+ * 2、双链表：注意从第一个头指针不是该删除元素开始，并使用cur元素，替代进行循环，避免头指针的丢失
  */
 public class DeleteGivenValue {
     public static Node deleteNodeGivenValue(Node head, int num) {

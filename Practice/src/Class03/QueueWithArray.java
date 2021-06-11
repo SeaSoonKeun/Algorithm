@@ -35,6 +35,7 @@ public class QueueWithArray {
             size--;
             // ? 超过数组边界，怎么实现循环
             int ans = arr[begin];
+            // 这一步很关键，通过三目表达式，实现index的循环
             begin = nextIndex(begin);
             return ans;
         }
@@ -46,6 +47,7 @@ public class QueueWithArray {
         }else{
             size++;
             arr[end] = a;
+            // 这一步很关键，通过三目表达式，实现index的循环
             end = nextIndex(end);
         }
     }

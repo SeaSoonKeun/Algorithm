@@ -4,6 +4,7 @@ package Class03;
  * @Auther: xucg
  * @Date: 2021/6/10 - 06 - 10 - 3:24 下午
  * @Description: 用数组实现栈
+ * 思路：数组实现先抓住整体大小，避免因为位置引入多余的操作。
  */
 public class StackWithArray {
     int[] arr = new int[5];

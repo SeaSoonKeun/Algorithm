@@ -7,9 +7,11 @@ package Class03;
  */
 public class GetMax {
     public static int getMax(int[] arr, int L, int R){
+        // 注意basecase条件不能漏掉，不然会引起栈溢出
         if (L == R) {
             return arr[L];
         }
+        // 位运算需要用括号括起来，运算优先级很低
         int mid = L + ((R - L) >> 1);
         int leftMax = getMax(arr, L, mid);
         int rightMax = getMax(arr, mid + 1, R);
