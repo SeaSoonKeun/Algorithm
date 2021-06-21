@@ -28,7 +28,7 @@ public class Code01_LinkedListMid {
         }
         Node slow = head.next;
         Node fast = head.next.next;
-        if (fast.next != null && fast.next.next != null){
+        while (fast.next != null && fast.next.next != null){
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -42,7 +42,7 @@ public class Code01_LinkedListMid {
         }
         Node slow = head.next;
         Node fast = head.next;
-        if (fast.next != null && fast.next.next != null){
+        while (fast.next != null && fast.next.next != null){
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -56,7 +56,7 @@ public class Code01_LinkedListMid {
         }
         Node slow = head;
         Node fast = head.next.next;
-        if (fast.next != null && fast.next.next!=null){
+        while (fast.next != null && fast.next.next!=null){
             slow = slow.next;
             fast = fast.next.next;
         }
@@ -72,7 +72,7 @@ public class Code01_LinkedListMid {
         }
         Node slow = head;
         Node fast = head.next;
-        if (fast.next != null && fast.next.next!= null){
+        while (fast.next != null && fast.next.next!= null){
             slow = slow.next;
             fast = fast.next.next;
         }
